@@ -62,3 +62,72 @@ nav ul li a:hover{
     border-radius: 5px;
     cursor: pointer;
 }
+
+#home{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 80px 60px;
+    background: #FFF8E7;
+    min-height: 90vh;
+}
+
+.home-text{
+    width: 50%;
+}
+
+.home-text h1{
+    font-size: 55px;
+    color: #3E2723;
+    margin-bottom: 20px;
+    line-height: 1.2;
+}
+
+.home-text p{
+    font-size: 18px;
+    color: #5D4037;
+    line-height: 1.8;
+    margin-bottom: 30px;
+}
+
+.home-text a{
+    display: inline-block;
+    text-decoration: none;
+    background: #6F4E37;
+    color: white;
+    padding: 14px 30px;
+    border-radius: 30px;
+    font-size: 18px;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.home-text a:hover{
+    background: #D2B48C;
+    color: #3E2723;
+}
+
+.home-image{
+    width: 30%;
+    text-align: center;
+}
+
+.home-image img{
+    width: 100%;
+    max-width: 500px;
+    animation: float 3s ease-in-out infinite;
+}
+
+/* Floating Animation */
+
+@keyframes float{
+    0%{
+        transform: translateY(0);
+    }
+    50%{
+        transform: translateY(-15px);
+    }
+    100%{
+        transform: translateY(0);
+    }
+}
