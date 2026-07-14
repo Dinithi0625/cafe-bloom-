@@ -261,4 +261,163 @@ nav ul li a:hover{
 
 .about-box div:hover h3{
     transform: scale(1.08);
+}/* ================= MENU SECTION ================= */
+
+#menu{
+    padding: 100px 60px;
+    background: linear-gradient(180deg,#F4E1D2,#FFF8F0,#F9F5F0);
+}
+
+#menu h2{
+    text-align: center;
+    font-size: 50px;
+    color: #3E2723;
+    margin-bottom: 60px;
+    position: relative;
+    letter-spacing: 1px;
+}
+
+#menu h2::after{
+    content: "";
+    width: 90px;
+    height: 4px;
+    background: #D4A373;
+    display: block;
+    margin: 15px auto;
+    border-radius: 20px;
+}
+
+/* Category Titles */
+
+#menu h3{
+    font-size: 32px;
+    color: #6F4E37;
+    margin: 50px 0 30px;
+    padding-left: 15px;
+    border-left: 8px solid #D4A373;
+    text-shadow: 1px 1px 3px rgba(0,0,0,.1);
+}
+
+/* Menu Container */
+
+.menu-container{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 35px;
+    margin-bottom: 60px;
+}
+
+/* Card */
+
+.menu-card{
+    width: 260px;
+    background: rgba(255,255,255,.75);
+    backdrop-filter: blur(10px);
+    border-radius: 22px;
+    overflow: hidden;
+    box-shadow: 0 10px 25px rgba(0,0,0,.12);
+    transition: .4s;
+    text-align: center;
+    border: 2px solid transparent;
+}
+
+.menu-card:hover{
+    transform: translateY(-12px) scale(1.04);
+    border-color: #D4A373;
+    box-shadow: 0 18px 35px rgba(111,78,55,.25);
+}
+
+/* Image */
+
+.menu-card img{
+    width: 100%;
+    height: 220px;
+    object-fit: cover;
+    transition: .4s;
+}
+
+.menu-card:hover img{
+    transform: scale(1.08);
+}
+
+/* Title */
+
+.menu-card h4{
+    color: #3E2723;
+    font-size: 24px;
+    margin-top: 18px;
+}
+
+/* Description */
+
+.menu-card p{
+    color: #5D4037;
+    font-size: 16px;
+    padding: 10px 18px;
+    line-height: 1.7;
+    min-height: 60px;
+}
+
+/* Price */
+
+.menu-card h5{
+    color: white;
+    background: linear-gradient(90deg,#6F4E37,#D4A373);
+    display: inline-block;
+    padding: 10px 25px;
+    border-radius: 30px;
+    margin: 20px 0 25px;
+    font-size: 18px;
+    letter-spacing: .5px;
+    box-shadow: 0 6px 15px rgba(111,78,55,.3);
+}
+
+/* Different colors for each category */
+
+#menu h3:nth-of-type(1){
+    color:#6F4E37;
+    border-left-color:#8D6E63;
+}
+
+#menu h3:nth-of-type(2){
+    color:#0277BD;
+    border-left-color:#29B6F6;
+}
+
+#menu h3:nth-of-type(3){
+    color:#2E7D32;
+    border-left-color:#66BB6A;
+}
+
+#menu h3:nth-of-type(4){
+    color:#8E24AA;
+    border-left-color:#CE93D8;
+}
+
+#menu h3:nth-of-type(5){
+    color:#D84315;
+    border-left-color:#FFB74D;
+}
+
+/* Responsive */
+
+@media(max-width:768px){
+
+    #menu{
+        padding:80px 20px;
+    }
+
+    #menu h2{
+        font-size:40px;
+    }
+
+    #menu h3{
+        font-size:26px;
+    }
+
+    .menu-card{
+        width:100%;
+        max-width:340px;
+    }
 }
