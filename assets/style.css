@@ -420,6 +420,331 @@ nav ul li a:hover{
         width:100%;
         max-width:340px;
     }
+}/* ================= SEASONAL SPECIALS ================= */
+
+#special{
+    padding: 100px 60px;
+    background: linear-gradient(180deg,#FFF8F0,#F4E1D2,#FFF3E0);
+    text-align: center;
+    position: relative;
+    overflow: hidden;
 }
 
 
+/* Background Glow */
+
+#special::before{
+    content: "";
+    position: absolute;
+    width: 500px;
+    height: 500px;
+    background: rgba(212,163,115,.18);
+    border-radius: 50%;
+    top: -180px;
+    left: -150px;
+    filter: blur(100px);
+}
+
+
+#special::after{
+    content: "";
+    position: absolute;
+    width: 450px;
+    height: 450px;
+    background: rgba(255,213,79,.15);
+    border-radius: 50%;
+    bottom: -180px;
+    right: -120px;
+    filter: blur(100px);
+}
+
+
+
+/* Heading */
+
+#special h2{
+    font-size: 50px;
+    color: #3E2723;
+    margin-bottom: 70px;
+    position: relative;
+    display: inline-block;
+    z-index: 2;
+    letter-spacing: 1px;
+    font-weight: bold;
+}
+
+
+#special h2::after{
+    content: "";
+    width: 90px;
+    height: 4px;
+    background: #D4A373;
+    display: block;
+    margin: 15px auto;
+    border-radius: 20px;
+}
+
+
+
+/* Container */
+
+.special-container{
+
+    display:flex;
+    justify-content:center;
+    flex-wrap:wrap;
+    gap:40px;
+
+    position:relative;
+    z-index:2;
+
+}
+
+
+
+/* Card */
+
+.special-card{
+
+    width:360px;
+
+    background: rgba(255,255,255,.75);
+
+    backdrop-filter: blur(12px);
+
+    border-radius:25px;
+
+    overflow:hidden;
+
+    cursor:pointer;
+
+    transition:.45s;
+
+    border:2px solid rgba(212,163,115,.25);
+
+    box-shadow:0 12px 30px rgba(111,78,55,.18);
+
+    position:relative;
+
+}
+
+
+
+.special-card:hover{
+
+    transform:translateY(-15px) scale(1.04);
+
+    border-color:#D4A373;
+
+    box-shadow:0 20px 45px rgba(111,78,55,.30);
+
+}
+
+
+
+/* Image */
+
+
+.special-card img{
+
+    width:100%;
+
+    height:250px;
+
+    object-fit:cover;
+
+    transition:.5s;
+
+}
+
+
+
+.special-card:hover img{
+
+    transform:scale(1.1);
+
+}
+
+
+
+/* Image Overlay */
+
+
+.special-card::after{
+
+    content:"";
+
+    position:absolute;
+
+    top:0;
+    left:0;
+
+    width:100%;
+
+    height:250px;
+
+    background:linear-gradient(
+        to top,
+        rgba(62,39,35,.35),
+        transparent
+    );
+
+}
+
+
+
+/* Badge */
+
+
+.special-card::before{
+
+    content:"⭐ Seasonal";
+
+    position:absolute;
+
+    top:15px;
+
+    left:15px;
+
+    background:linear-gradient(
+        90deg,
+        #D4A373,
+        #FFD54F
+    );
+
+    color:#3E2723;
+
+    padding:8px 18px;
+
+    border-radius:30px;
+
+    font-size:14px;
+
+    font-weight:bold;
+
+    z-index:3;
+
+    box-shadow:0 5px 15px rgba(0,0,0,.2);
+
+}
+
+
+
+/* Title */
+
+
+.special-card h3{
+
+    color:#3E2723;
+
+    font-size:28px;
+
+    margin:25px 20px 10px;
+
+    transition:.3s;
+
+}
+
+
+
+.special-card:hover h3{
+
+    color:#A0522D;
+
+}
+
+
+
+/* Description */
+
+
+.special-card p{
+
+    color:#6F4E37;
+
+    font-size:17px;
+
+    line-height:1.8;
+
+    padding:0 20px 30px;
+
+}
+
+
+
+/* Button */
+
+
+.special-btn{
+
+    display:inline-block;
+
+    margin-bottom:25px;
+
+    padding:12px 30px;
+
+
+    background:linear-gradient(
+        90deg,
+        #D4A373,
+        #FFD54F
+    );
+
+
+    color:#3E2723;
+
+    text-decoration:none;
+
+    border-radius:30px;
+
+    font-weight:bold;
+
+    transition:.3s;
+
+    box-shadow:0 5px 15px rgba(212,163,115,.4);
+
+}
+
+
+
+.special-btn:hover{
+
+    background:#3E2723;
+
+    color:white;
+
+    transform:scale(1.08);
+
+}
+
+
+
+/* Responsive */
+
+
+@media(max-width:768px){
+
+
+    #special{
+
+        padding:80px 20px;
+
+    }
+
+
+    #special h2{
+
+        font-size:40px;
+
+    }
+
+
+    .special-card{
+
+        width:100%;
+
+        max-width:360px;
+
+    }
+
+}
