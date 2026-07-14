@@ -31,7 +31,6 @@ nav .logo img{
     width: 60px;
     height: 60px;
     margin-right: 10px;
-
     border-radius: 50%;          
     border: 3px solid #D2B48C;   
     object-fit: cover;
@@ -136,4 +135,130 @@ nav ul li a:hover{
     100%{
         transform: translateY(0);
     }
+}
+/* ================= ABOUT SECTION ================= */
+
+#about{
+    background: linear-gradient(to bottom,#FFF8F0,#F8F1E7);
+    padding: 100px 60px;
+    text-align: center;
+}
+
+#about h2{
+    font-size: 48px;
+    color: #3E2723;
+    margin-bottom: 25px;
+    font-weight: bold;
+    letter-spacing: 1px;
+    position: relative;
+    display: inline-block;
+}
+
+/* Underline Effect */
+
+#about h2::after{
+    content: "";
+    width: 80px;
+    height: 4px;
+    background: #D4A373;
+    display: block;
+    margin: 15px auto 0;
+    border-radius: 20px;
+}
+
+/* Cookie Animation */
+
+.cookie{
+    display: inline-block;
+    font-size: 40px;
+    animation: bounce 2s infinite ease-in-out;
+    transform-origin: center;
+}
+
+.cookie2{
+    animation-delay: .4s;
+}
+
+@keyframes bounce{
+
+    0%,100%{
+        transform: translateY(0) rotate(0deg);
+    }
+
+    25%{
+        transform: translateY(-8px) rotate(-12deg);
+    }
+
+    50%{
+        transform: translateY(4px) rotate(12deg);
+    }
+
+    75%{
+        transform: translateY(-5px) rotate(-8deg);
+    }
+}
+
+#about p{
+    width: 75%;
+    margin: auto;
+    font-size: 18px;
+    color: #5D4037;
+    line-height: 1.9;
+    margin-bottom: 60px;
+}
+
+/* ================= ABOUT CARDS ================= */
+
+.about-box{
+    display: flex;
+    justify-content: center;
+    gap: 35px;
+    flex-wrap: wrap;
+}
+
+.about-box div{
+    width: 300px;
+    background: #ffffff;
+    padding: 35px 25px;
+    border-radius: 20px;
+    box-shadow: 0 10px 25px rgba(0,0,0,.12);
+    transition: .4s;
+    cursor: pointer;
+    border: 2px solid transparent;
+}
+
+.about-box div:hover{
+    transform: translateY(-12px) scale(1.05);
+    background: #FFF8E7;
+    border-color: #D4A373;
+    box-shadow: 0 18px 35px rgba(111,78,55,.25);
+}
+
+.about-box h3{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 12px;
+
+    font-size: 24px;
+    color: #6F4E37;
+    margin-bottom: 18px;
+}
+
+.about-box p{
+    width: 100%;
+    margin: 0;
+    font-size: 16px;
+    color: #5D4037;
+    line-height: 1.8;
+}
+
+/* Emoji inside cards */
+
+.about-box h3{
+    transition: .3s;
+}
+
+.about-box div:hover h3{
+    transform: scale(1.08);
 }
